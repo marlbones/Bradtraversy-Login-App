@@ -11,10 +11,13 @@
           <div class="header clearfix">
             <nav>
               <ul class="nav nav-pills pull-right">
-                <li role="presentation"><a href="/">Dashboard</a></li>
+                {{#if user}}
+                  <li role="presentation"><a href="/users/logout">Logout</a></li>
+                  <li role="presentation"><a href="/">Dashboard</a></li>
+                {{else}}
                 <li role="presentation"><a href="/users/login">Login</a></li>
                 <li role="presentation"><a href="/users/register">Register</a></li>
-                <li role="presentation"><a href="/users/logout">Logout</a></li>
+                {{/if}}
               </ul>
             </nav>
             <h3 class="text-muted">Login App</h3>
